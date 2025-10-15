@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Girls Gully Cricket - Helix'25</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100 text-gray-900">
+  <header class="bg-gradient-to-r from-blue-700 to-indigo-600 text-white text-center py-8 shadow-lg">
+    <h1 class="text-4xl font-extrabold tracking-wide">Gully Cricket</h1>
+    <p class="text-lg mt-2">Girls</p> Event | Helix'25</p>
+  </header>
+
+  <main class="max-w-3xl mx-auto mt-8 p-6 bg-white rounded-xl shadow-lg">
+
+  <section class="mb-6">
+    <h2 class="text-2xl font-semibold text-blue-700 mb-2">About the Event</h2>
+    <p>Girls’ Gully Cricket is a thrilling and fast-paced team sport where participants showcase their batting, bowling, and fielding skills. Teams compete to score the highest runs while demonstrating teamwork, strategy, and sportsmanship.</p>
+  </section>
+
+  <section class="mb-6">
+    <h2 class="text-2xl font-semibold text-blue-700 mb-2">Rules & Regulations</h2>
+    <ul class="list-disc list-inside space-y-1">
+      <li>Each team consists of 6–8 players.</li>
+      <li>Matches will follow standard street/gully cricket rules (T10 format: 10 overs per side).</li>
+      <li>The umpire’s decision will be final.</li>
+      <li>Teams must report 15 minutes before the match.</li>
+      <li>Maintain sportsmanship, discipline, and fair play at all times.</li>
+      <li>Any disputes should be resolved by the organizing committee.</li>
+    </ul>
+  </section>
+
+
+    <section class="mb-6">
+      <h2 class="text-2xl font-semibold text-blue-700 mb-4">Register Now</h2>
+
+      <!-- ✅ Corrected Form -->
+      <form id="registrationForm" class="space-y-4">
+        <div>
+          <label class="block font-medium">Full Name</label>
+          <input type="text" name="fullname" required class="w-full border border-gray-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+
+        <div>
+          <label class="block font-medium">Roll Number</label>
+          <input type="text" name="roll" required class="w-full border border-gray-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+
+        <div>
+          <label class="block font-medium">Phone Number</label>
+          <input type="tel" name="phone" required class="w-full border border-gray-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+
+        <div>
+          <label class="block font-medium">Email</label>
+          <input type="email" name="email" required class="w-full border border-gray-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+
+        <!-- ✅ Hidden event name -->
+        <input type="hidden" name="event" value="Girls Gully Cricket ">
+
+        <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700">
+          Submit Registration
+        </button>
+      </form>
+    </section>
+
+    <div class="text-center mt-6">
+      <a href="index.html" class="inline-block bg-gray-800 text-white px-6 py-2 rounded-lg hover:bg-gray-900">← Back to Home</a>
+    </div>
+  </main>
+
+  <footer class="text-center mt-10 py-4 bg-gray-900 text-white">
+    <p>&copy; 2025 Helix'25 | Designed by Students | College Fest Committee</p>
+  </footer>
+
+  <!-- ✅ Script for sending data to Google Sheet -->
+  <script>
+    const form = document.getElementById('registrationForm');
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+
+      fetch('https://script.google.com/macros/s/AKfycbyK44Jakgr6ZOr6_dCCGkQxfMBj2l2HjDv1ytRx0BmLzrBQTg8eVgcjlGCeEr8Zpzrg/exec', {  // ⬅ Replace this with your Apps Script Web App URL
+        method: 'POST',
+        body: new URLSearchParams(new FormData(form))
+      })
+      .then(response => response.text())
+      .then(result => {
+        alert("✅ Registration submitted successfully!");
+        form.reset();
+      })
+      .catch(error => {
+        alert("❌ Error submitting form. Please try again!");
+        console.error(error);
+      });
+    });
+  </script>
+
+</body>
+</html>
