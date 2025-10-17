@@ -3,76 +3,115 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Helix'25 - College Fest</title>
+  <title>Helix'25 - College Fest | Department of Biotechnology</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+  <!-- Optional: Add Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* Subtle fade-in animation */
+    .fade-in {
+      animation: fadeIn 1.2s ease-in-out both;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Background hero image overlay */
+    .hero {
+      background: linear-gradient(to right, rgba(88, 28, 135, 0.9), rgba(219, 39, 119, 0.9)), 
+                  url('https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=1920&q=80');
+      background-size: cover;
+      background-position: center;
+    }
+
+    /* Card hover effect */
+    .event-card:hover {
+      transform: translateY(-6px);
+      transition: all 0.3s ease;
+    }
+  </style>
 </head>
-<body class="bg-gray-100 text-gray-900">
 
-<header class="bg-gradient-to-r from-purple-700 to-pink-600 text-white text-center py-10 shadow-lg">
-  <h1 class="text-4xl font-extrabold tracking-wide">Helix'25</h1>
-  <p class="text-2xl mt-4 font-semibold">
-    <span class="text-green-600">Department</span> 
-    <span class="text-green-600">of</span> 
-    <span class="text-green-600">Biotechnology,</span> <br>
-    <span class="text-green-600">GIET</span> 
-    <span class="text-green-600">University</span>
-  </p>
+<body class="bg-gray-50 text-gray-900">
 
-  <!-- Fest info with colors -->
-  <p class="text-yellow-300 text-xl mt-2 italic">Helix’25 stands as a symbol of unity, enthusiasm, and innovation.<br>
-    It’s not just an event — it’s a movement that inspires young biotechnologists to think beyond the lab, beyond the limits.<br>
-    Here, ideas come alive, friendships grow stronger, and every moment echoes with the spirit of growth and discovery.<br>
-  </p>
-  <p class="text-cyan-200 text-lg mt-1 font-medium">📅 24th October 2025</p>
+  <!-- Hero Header -->
+  <header class="hero text-white text-center py-20 shadow-xl fade-in">
+    <h1 class="text-5xl md:text-6xl font-extrabold tracking-wide drop-shadow-lg">Helix'25</h1>
+    <p class="text-2xl mt-4 font-semibold text-green-200">Department of Biotechnology</p>
+    <p class="text-lg font-medium text-green-100">GIET University, Gunupur</p>
 
-  <!-- Exclusive note -->
-  <p class="mt-4 text-lg font-semibold text-yellow-200 bg-black bg-opacity-30 inline-block px-4 py-2 rounded-lg">
-    🔬 Participation is open exclusively to Biotechnology students only.
-  </p>
-</header>
-  
+    <p class="text-yellow-200 text-xl mt-6 italic max-w-3xl mx-auto">
+      Helix’25 is not just a fest — it’s a celebration of science, creativity, and collaboration.<br>
+      Where young biotechnologists unite to innovate, inspire, and ignite the spirit of discovery.
+    </p>
 
-<main class="max-w-6xl mx-auto p-8">
-  <section class="mb-10">
-    <h2 class="text-3xl font-semibold text-blue-700 mb-4">Boys Events</h2>
-    <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
-      <a href="boys_cricket.html" class="p-4 bg-white rounded-lg shadow hover:bg-blue-50">Cricket</a>
-      <a href="boys_gully_cricket.html" class="p-4 bg-white rounded-lg shadow hover:bg-blue-50">Gully Cricket</a>
-      <a href="boys_futsal.html" class="p-4 bg-white rounded-lg shadow hover:bg-blue-50">Futsal</a>
-      <a href="boys_kabbadi.html" class="p-4 bg-white rounded-lg shadow hover:bg-blue-50">Kabbadi</a>
-      <a href="boys_volleyball.html" class="p-4 bg-white rounded-lg shadow hover:bg-blue-50">Volleyball</a>
+    <p class="text-cyan-200 text-lg mt-4 font-semibold">📅 24th October 2025</p>
+
+    <div class="mt-6">
+      <a href="#events" class="bg-yellow-400 text-gray-900 px-6 py-3 rounded-full font-semibold shadow-md hover:bg-yellow-300 transition">
+        🔗 Explore Events
+      </a>
     </div>
-  </section>
 
-  <section class="mb-10">
-    <h2 class="text-3xl font-semibold text-pink-700 mb-4">Girls Events</h2>
-    <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
-      <a href="girls_makeup.html" class="p-4 bg-white rounded-lg shadow hover:bg-pink-50">Makeup</a>
-      <a href="girls_pithu.html" class="p-4 bg-white rounded-lg shadow hover:bg-pink-50">Pithu</a>
-      <a href="girls_throwball.html" class="p-4 bg-white rounded-lg shadow hover:bg-pink-50">Throwball</a>
-      <a href="girls_gully_cricket.html" class="p-4 bg-white rounded-lg shadow hover:bg-pink-50">Gully Cricket</a>
-    </div>
-  </section>
+    <p class="mt-6 text-lg font-semibold text-yellow-100 bg-black bg-opacity-30 inline-block px-5 py-2 rounded-lg">
+      🔬 Open exclusively for Biotechnology students only.
+    </p>
+  </header>
 
-  <section>
-    <h2 class="text-3xl font-semibold text-green-700 mb-4">Common Events</h2>
-    <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
-      <a href="common_badminton.html" class="p-4 bg-white rounded-lg shadow hover:bg-green-50">Badminton</a>
-      <a href="common_tugofwar.html" class="p-4 bg-white rounded-lg shadow hover:bg-green-50">Tug of War</a>
-      <a href="common_photography.html" class="p-4 bg-white rounded-lg shadow hover:bg-green-50">Photography</a>
-      <a href="common_redlight_greenlight.html" class="p-4 bg-white rounded-lg shadow hover:bg-green-50">Red Light Green Light</a>
-      <a href="common_nofire_fiesta.html" class="p-4 bg-white rounded-lg shadow hover:bg-green-50">No Fire Fiesta</a>
-      <a href="common_treasure_hunt.html" class="p-4 bg-white rounded-lg shadow hover:bg-green-50">Treasure Hunt</a>
-      <a href="common_bgmi.html" class="p-4 bg-white rounded-lg shadow hover:bg-green-50">BGMI / Free Fire / COD</a>
-      <a href="common_carrom.html" class="p-4 bg-white rounded-lg shadow hover:bg-green-50">Carrom</a>
-      <a href="common_chess.html" class="p-4 bg-white rounded-lg shadow hover:bg-green-50">Chess</a>
-    </div>
-  </section>
-</main>
+  <!-- Events Section -->
+  <main id="events" class="max-w-7xl mx-auto p-8 fade-in">
+    <!-- Boys Events -->
+    <section class="mb-12">
+      <h2 class="text-3xl font-bold text-blue-700 mb-6 border-b-4 border-blue-500 inline-block">Boys Events</h2>
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <a href="boys_cricket.html" class="event-card p-5 bg-white rounded-xl shadow hover:shadow-blue-200">🏏 Cricket</a>
+        <a href="boys_gully_cricket.html" class="event-card p-5 bg-white rounded-xl shadow hover:shadow-blue-200">⚾ Gully Cricket</a>
+        <a href="boys_futsal.html" class="event-card p-5 bg-white rounded-xl shadow hover:shadow-blue-200">⚽ Futsal</a>
+        <a href="boys_kabbadi.html" class="event-card p-5 bg-white rounded-xl shadow hover:shadow-blue-200">🤼‍♂️ Kabbadi</a>
+        <a href="boys_volleyball.html" class="event-card p-5 bg-white rounded-xl shadow hover:shadow-blue-200">🏐 Volleyball</a>
+      </div>
+    </section>
 
-<footer class="bg-gray-900 text-white text-center py-6 mt-12">
-  <p class="text-sm">&copy; 2025 Helix'25 | Designed by Biotech | GIET University</p>
-</footer>
+    <!-- Girls Events -->
+    <section class="mb-12">
+      <h2 class="text-3xl font-bold text-pink-700 mb-6 border-b-4 border-pink-500 inline-block">Girls Events</h2>
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <a href="girls_makeup.html" class="event-card p-5 bg-white rounded-xl shadow hover:shadow-pink-200">💄 Makeup</a>
+        <a href="girls_pithu.html" class="event-card p-5 bg-white rounded-xl shadow hover:shadow-pink-200">🎯 Pithu</a>
+        <a href="girls_throwball.html" class="event-card p-5 bg-white rounded-xl shadow hover:shadow-pink-200">🏐 Throwball</a>
+        <a href="girls_gully_cricket.html" class="event-card p-5 bg-white rounded-xl shadow hover:shadow-pink-200">🏏 Gully Cricket</a>
+      </div>
+    </section>
+
+    <!-- Common Events -->
+    <section>
+      <h2 class="text-3xl font-bold text-green-700 mb-6 border-b-4 border-green-500 inline-block">Common Events</h2>
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <a href="common_badminton.html" class="event-card p-5 bg-white rounded-xl shadow hover:shadow-green-200">🏸 Badminton</a>
+        <a href="common_tugofwar.html" class="event-card p-5 bg-white rounded-xl shadow hover:shadow-green-200">💪 Tug of War</a>
+        <a href="common_photography.html" class="event-card p-5 bg-white rounded-xl shadow hover:shadow-green-200">📸 Photography</a>
+        <a href="common_redlight_greenlight.html" class="event-card p-5 bg-white rounded-xl shadow hover:shadow-green-200">🟢 Red Light Green Light</a>
+        <a href="common_nofire_fiesta.html" class="event-card p-5 bg-white rounded-xl shadow hover:shadow-green-200">🍱 No Fire Fiesta</a>
+        <a href="common_treasure_hunt.html" class="event-card p-5 bg-white rounded-xl shadow hover:shadow-green-200">🗺️ Treasure Hunt</a>
+        <a href="common_bgmi.html" class="event-card p-5 bg-white rounded-xl shadow hover:shadow-green-200">🎮 BGMI / Free Fire / COD</a>
+        <a href="common_carrom.html" class="event-card p-5 bg-white rounded-xl shadow hover:shadow-green-200">🎯 Carrom</a>
+        <a href="common_chess.html" class="event-card p-5 bg-white rounded-xl shadow hover:shadow-green-200">♟️ Chess</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-200 text-center py-6 mt-16">
+    <p class="text-sm">&copy; 2025 <span class="text-yellow-400 font-semibold">Helix'25</span> | Designed by <span class="text-green-400">Department of Biotechnology</span>, GIET University</p>
+  </footer>
 
 </body>
 </html>
